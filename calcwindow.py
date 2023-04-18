@@ -5,7 +5,7 @@ import sys
 import pymysql
 import getmarket
 
-form_calcwindow = uic.loadUiType('calcwindow.ui')[0]
+form_calcwindow = uic.loadUiType('ui/calcwindow.ui')[0]
 
 con = pymysql.connect(host='127.0.0.1', user='bns_db', password='336677', db='bns_calculater', charset='utf8')
 cur = con.cursor()
@@ -133,7 +133,7 @@ if __name__ == '__main__':
     # materials = cls_market.get_material(token)
 
     app = QApplication(sys.argv)
-    app.setWindowIcon(QIcon('icon.png'))
+    app.setWindowIcon(QIcon('/img/icon.png'))
     # calcwindow = CalcWindow(materials, token)
     # calcwindow.show()
     app.exec_()

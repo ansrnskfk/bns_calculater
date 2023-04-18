@@ -7,7 +7,7 @@ import getmarket
 import helpwindow
 import calcwindow
 
-form_loginwindow = uic.loadUiType('loginwindow.ui')[0]
+form_loginwindow = uic.loadUiType('ui/loginwindow.ui')[0]
 print(uic.__file__)
 
 
@@ -70,6 +70,6 @@ class LoginWindow(QWidget, form_loginwindow):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    app.setWindowIcon(QIcon('icon.png'))
+    app.setWindowIcon(QIcon('/img/icon.png'))
     loginwindow = LoginWindow()
     app.exec_()
